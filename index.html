@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Gowshigan V - AI and Data Science Portfolio. B.Tech student specializing in Machine Learning, Computer Vision, and Generative AI. Freelance AI Developer based in Madurai, India." />
+  <meta name="keywords" content="Gowshigan, AI Engineer, Data Science, Computer Vision, Machine Learning, Portfolio, Madurai" />
+  <meta name="author" content="Gowshigan V" />
+  <title>Gowshigan V | AI &amp; Data Science Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- CURSOR GLOW -->
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- LOADER -->
+  <div class="loader" id="loader">
+    <div class="loader-inner">
+      <div class="loader-ring"></div>
+      <div class="loader-text">GV<span class="loader-dot">.</span></div>
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo" id="navLogo">
+        <span class="logo-bracket">&lt;</span>GV<span class="logo-bracket">/&gt;</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active" data-section="home">Home</a></li>
+        <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+        <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
+        <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+        <li><a href="#experience" class="nav-link" data-section="experience">Experience</a></li>
+        <li><a href="#education" class="nav-link" data-section="education">Education</a></li>
+        <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-bg">
+      <div class="hero-grid"></div>
+      <div class="hero-orb orb-1"></div>
+      <div class="hero-orb orb-2"></div>
+      <div class="hero-orb orb-3"></div>
+      <canvas class="particles-canvas" id="particlesCanvas"></canvas>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Available for opportunities
+      </div>
+      <h1 class="hero-name">
+        <span class="name-line">Gowshigan</span>
+        <span class="name-line name-accent">V.</span>
+      </h1>
+      <div class="hero-title-wrapper">
+        <span class="hero-prefix">I build </span>
+        <span class="hero-typewriter" id="typewriter"></span><span class="cursor-blink">|</span>
+      </div>
+      <p class="hero-description">
+        AI &amp; Data Science undergraduate crafting intelligent systems &mdash; from computer
+        vision pipelines to generative AI chatbots. Based in Madurai, India.
+      </p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary" id="heroProjectsBtn">
+          <span>View Projects</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#contact" class="btn btn-ghost" id="heroContactBtn">Get in touch</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <div class="stat-top">
+            <span class="stat-number" data-target="8">0</span><span class="stat-suffix">+</span>
+          </div>
+          <span class="stat-label">AI Projects</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <div class="stat-top">
+            <span class="stat-number" data-target="7">0</span><span class="stat-suffix">.55</span>
+          </div>
+          <span class="stat-label">CGPA</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <div class="stat-top">
+            <span class="stat-number" data-target="5">0</span><span class="stat-suffix">+</span>
+          </div>
+          <span class="stat-label">Hackathons</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="avatar-container" id="avatarContainer">
+        <div class="avatar-ring ring-1"></div>
+        <div class="avatar-ring ring-2"></div>
+        <div class="avatar-ring ring-3"></div>
+        <div class="avatar-core">
+          <div class="avatar-initials">GV</div>
+          <div class="avatar-pulse"></div>
+        </div>
+        <div class="floating-badge badge-ml">
+          <span>&#x1F916;</span> ML Engineer
+        </div>
+        <div class="floating-badge badge-cv">
+          <span>&#x1F441;&#xFE0F;</span> Computer Vision
+        </div>
+        <div class="floating-badge badge-genai">
+          <span>&#x26A1;</span> Gen AI
+        </div>
+      </div>
+    </div>
+    <a href="#about" class="scroll-indicator" id="scrollIndicator" aria-label="Scroll to about section">
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
+      </div>
+      <span>Scroll down</span>
+    </a>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section about-section" id="about">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">About me</span>
+        <h2 class="section-title">Turning Data into <span class="text-gradient">Intelligence</span></h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text" data-aos="fade-right">
+          <p class="about-lead">
+            I'm an <strong>AI &amp; Data Science</strong> undergraduate (B.Tech, graduating 2027) with hands-on experience in the full machine learning lifecycle.
+          </p>
+          <p>
+            My expertise spans <strong>data preprocessing, model training &amp; evaluation, computer vision</strong> (OpenCV, YOLO), and <strong>generative AI / conversational systems</strong>. As a freelance AI developer, I've delivered client-facing chatbots and Power BI dashboards that drive real business value.
+          </p>
+          <p>
+            I'm actively seeking an entry-level <strong>AI/ML Engineer</strong> or <strong>Computer Vision Engineer</strong> role where I can contribute to meaningful, impactful projects.
+          </p>
+          <div class="about-info-grid">
+            <div class="info-item">
+              <span class="info-icon">&#x1F4CD;</span>
+              <div>
+                <span class="info-label">Location</span>
+                <span class="info-value">Madurai, India</span>
+              </div>
+            </div>
+            <div class="info-item">
+              <span class="info-icon">&#x1F393;</span>
+              <div>
+                <span class="info-label">Degree</span>
+                <span class="info-value">B.Tech &ndash; AI &amp; Data Science</span>
+              </div>
+            </div>
+            <div class="info-item">
+              <span class="info-icon">&#x1F4C5;</span>
+              <div>
+                <span class="info-label">Graduating</span>
+                <span class="info-value">2027</span>
+              </div>
+            </div>
+            <div class="info-item">
+              <span class="info-icon">&#x1F4BC;</span>
+              <div>
+                <span class="info-label">Status</span>
+                <span class="info-value info-open">Open to opportunities</span>
+              </div>
+            </div>
+          </div>
+          <div class="about-links">
+            <a href="https://github.com/gowshiganv-2005" target="_blank" rel="noopener" class="social-link" id="githubLink">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              GitHub
+            </a>
+            <a href="mailto:gowshigan20805@gmail.com" class="social-link" id="emailLink">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,12 2,6"/></svg>
+              Email
+            </a>
+          </div>
+        </div>
+        <div class="about-visual" data-aos="fade-left">
+          <div class="code-card">
+            <div class="code-card-header">
+              <span class="code-dot red"></span>
+              <span class="code-dot yellow"></span>
+              <span class="code-dot green"></span>
+              <span class="code-filename">gowshigan.py</span>
+            </div>
+            <pre class="code-content"><code><span class="ck">class</span> <span class="cc">Gowshigan</span><span class="cn">:</span>
+  <span class="ck">def</span> <span class="cf">__init__</span><span class="cn">(</span>self<span class="cn">):</span>
+    self<span class="cn">.</span>name <span class="cn">=</span> <span class="cs">"Gowshigan V"</span>
+    self<span class="cn">.</span>role <span class="cn">=</span> <span class="cs">"AI/ML Engineer"</span>
+    self<span class="cn">.</span>location <span class="cn">=</span> <span class="cs">"Madurai, India"</span>
+    self<span class="cn">.</span>cgpa <span class="cn">=</span> <span class="cnum">7.55</span>
+    self<span class="cn">.</span>graduating <span class="cn">=</span> <span class="cnum">2027</span>
+
+  <span class="ck">def</span> <span class="cf">get_skills</span><span class="cn">(</span>self<span class="cn">):</span>
+    <span class="ck">return</span> <span class="cn">[</span>
+      <span class="cs">"Computer Vision"</span><span class="cn">,</span>
+      <span class="cs">"Generative AI"</span><span class="cn">,</span>
+      <span class="cs">"Deep Learning"</span><span class="cn">,</span>
+      <span class="cs">"LLM Engineering"</span><span class="cn">,</span>
+      <span class="cs">"RAG Systems"</span><span class="cn">,</span>
+    <span class="cn">]</span>
+
+  <span class="ck">def</span> <span class="cf">get_passion</span><span class="cn">(</span>self<span class="cn">):</span>
+    <span class="ck">return</span> <span class="cs">"Building AI that matters"</span></code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="section skills-section" id="skills">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">Technical expertise</span>
+        <h2 class="section-title">Skills &amp; <span class="text-gradient">Technologies</span></h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-category" data-aos="fade-up" data-aos-delay="0">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon">&#x1F9E0;</div>
+            <h3>AI / Machine Learning</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">TensorFlow</span>
+            <span class="skill-tag">Keras</span>
+            <span class="skill-tag">PyTorch</span>
+            <span class="skill-tag">Scikit-learn</span>
+            <span class="skill-tag">Supervised Learning</span>
+            <span class="skill-tag">Unsupervised Learning</span>
+            <span class="skill-tag">Feature Engineering</span>
+          </div>
+        </div>
+        <div class="skill-category" data-aos="fade-up" data-aos-delay="60">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon">&#x1F441;&#xFE0F;</div>
+            <h3>Computer Vision</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">OpenCV</span>
+            <span class="skill-tag">YOLO</span>
+            <span class="skill-tag">Object Detection</span>
+            <span class="skill-tag">Face Detection</span>
+            <span class="skill-tag">Face Recognition</span>
+            <span class="skill-tag">Image Processing</span>
+          </div>
+        </div>
+        <div class="skill-category" data-aos="fade-up" data-aos-delay="120">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon">&#x26A1;</div>
+            <h3>Generative AI</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">Prompt Engineering</span>
+            <span class="skill-tag">LLM Conversational AI</span>
+            <span class="skill-tag">Chatbot Development</span>
+            <span class="skill-tag">RAG</span>
+            <span class="skill-tag">API Integration</span>
+          </div>
+        </div>
+        <div class="skill-category" data-aos="fade-up" data-aos-delay="0">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon">&#x1F4BB;</div>
+            <h3>Programming</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">Java</span>
+            <span class="skill-tag">C++</span>
+            <span class="skill-tag">Pandas</span>
+            <span class="skill-tag">NumPy</span>
+            <span class="skill-tag">Matplotlib</span>
+          </div>
+        </div>
+        <div class="skill-category" data-aos="fade-up" data-aos-delay="60">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon">&#x1F5C4;&#xFE0F;</div>
+            <h3>Data &amp; Databases</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">Power BI</span>
+            <span class="skill-tag">MySQL</span>
+            <span class="skill-tag">MongoDB</span>
+          </div>
+        </div>
+        <div class="skill-category" data-aos="fade-up" data-aos-delay="120">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon">&#x1F6E0;&#xFE0F;</div>
+            <h3>Tools &amp; Platforms</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">Git / GitHub</span>
+            <span class="skill-tag">Jupyter</span>
+            <span class="skill-tag">Google Colab</span>
+            <span class="skill-tag">VS Code</span>
+            <span class="skill-tag">ChatGPT</span>
+            <span class="skill-tag">GitHub Copilot</span>
+            <span class="skill-tag">Claude</span>
+            <span class="skill-tag">Cursor</span>
+          </div>
+        </div>
+      </div>
+      <div class="soft-skills" data-aos="fade-up">
+        <h3 class="soft-title">Soft Skills</h3>
+        <div class="soft-tags">
+          <span class="soft-tag">&#x1F680; Rapid Prototyping</span>
+          <span class="soft-tag">&#x23F1;&#xFE0F; Time Management</span>
+          <span class="soft-tag">&#x1F4CB; Project Management</span>
+          <span class="soft-tag">&#x1F91D; Team Collaboration</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="section projects-section" id="projects">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">What I've built</span>
+        <h2 class="section-title">Featured <span class="text-gradient">Projects</span></h2>
+      </div>
+      <div class="projects-grid">
+
+        <div class="project-card featured-card" data-aos="fade-up">
+          <div class="project-card-inner">
+            <div class="project-glow"></div>
+            <div class="project-featured-badge">&#x2B50; Featured</div>
+            <div class="project-header">
+              <div class="project-icon-wrap">&#x1F6D2;</div>
+              <div class="project-links">
+                <a href="https://zabbro-ecommerce.vercel.app/" target="_blank" rel="noopener" class="project-link-btn" id="ecommerceLink" aria-label="View live project">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  Live Demo
+                </a>
+              </div>
+            </div>
+            <h3 class="project-title">E-Commerce Platform</h3>
+            <p class="project-desc">Designed, built, and deployed a full e-commerce platform with product catalog, shopping cart, and checkout flow. Production-ready on Vercel.</p>
+            <div class="project-tech-stack">
+              <span class="tech-badge">Web Dev</span>
+              <span class="tech-badge">Full Stack</span>
+              <span class="tech-badge">Vercel</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card" data-aos="fade-up" data-aos-delay="60">
+          <div class="project-card-inner">
+            <div class="project-glow"></div>
+            <div class="project-header">
+              <div class="project-icon-wrap">&#x1F4AC;</div>
+            </div>
+            <h3 class="project-title">Tamil Conversational AI</h3>
+            <p class="project-desc">Tamil-language conversational AI chatbot built on LLM prompt-engineering techniques, enabling natural dialogue in the native language.</p>
+            <div class="project-tech-stack">
+              <span class="tech-badge">LLM</span>
+              <span class="tech-badge">Prompt Engineering</span>
+              <span class="tech-badge">NLP</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card" data-aos="fade-up" data-aos-delay="120">
+          <div class="project-card-inner">
+            <div class="project-glow"></div>
+            <div class="project-header">
+              <div class="project-icon-wrap">&#x1F600;</div>
+            </div>
+            <h3 class="project-title">Real-Time Emotion Detection</h3>
+            <p class="project-desc">Real-time facial emotion classification from live video using OpenCV and a custom CNN model for multi-class emotion recognition.</p>
+            <div class="project-tech-stack">
+              <span class="tech-badge">OpenCV</span>
+              <span class="tech-badge">CNN</span>
+              <span class="tech-badge">Deep Learning</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="project-card-inner">
+            <div class="project-glow"></div>
+            <div class="project-header">
+              <div class="project-icon-wrap">&#x1F441;&#xFE0F;</div>
+            </div>
+            <h3 class="project-title">Crowd Vision AI</h3>
+            <p class="project-desc">Computer vision system to monitor live user engagement and attention levels &mdash; real-time crowd intelligence for event analytics.</p>
+            <div class="project-tech-stack">
+              <span class="tech-badge">Computer Vision</span>
+              <span class="tech-badge">YOLO</span>
+              <span class="tech-badge">OpenCV</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card" data-aos="fade-up" data-aos-delay="60">
+          <div class="project-card-inner">
+            <div class="project-glow"></div>
+            <div class="project-header">
+              <div class="project-icon-wrap">&#x1F3E5;</div>
+            </div>
+            <h3 class="project-title">Medical Data Classifier</h3>
+            <p class="project-desc">Trained and evaluated multiple classification models using Scikit-learn on patient health data to improve clinical decision support.</p>
+            <div class="project-tech-stack">
+              <span class="tech-badge">Scikit-learn</span>
+              <span class="tech-badge">ML</span>
+              <span class="tech-badge">Classification</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card" data-aos="fade-up" data-aos-delay="120">
+          <div class="project-card-inner">
+            <div class="project-glow"></div>
+            <div class="project-header">
+              <div class="project-icon-wrap">&#x1F4C4;</div>
+            </div>
+            <h3 class="project-title">AI Resume Ranker</h3>
+            <p class="project-desc">AI-based system to intelligently parse and rank resumes against job requirements, streamlining candidate screening workflows.</p>
+            <div class="project-tech-stack">
+              <span class="tech-badge">NLP</span>
+              <span class="tech-badge">RAG</span>
+              <span class="tech-badge">Python</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="project-card-inner">
+            <div class="project-glow"></div>
+            <div class="project-header">
+              <div class="project-icon-wrap">&#x1F4DA;</div>
+            </div>
+            <h3 class="project-title">Self-Learning AI Assistant</h3>
+            <p class="project-desc">AI assistant that answers queries and supports self-guided learning journeys through intelligent knowledge retrieval and generation.</p>
+            <div class="project-tech-stack">
+              <span class="tech-badge">LLM</span>
+              <span class="tech-badge">RAG</span>
+              <span class="tech-badge">Chatbot</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card" data-aos="fade-up" data-aos-delay="60">
+          <div class="project-card-inner">
+            <div class="project-glow"></div>
+            <div class="project-header">
+              <div class="project-icon-wrap">&#x1F4E7;</div>
+            </div>
+            <h3 class="project-title">AI Email Automation</h3>
+            <p class="project-desc">Python-based automation system for AI-generated email drafting and automated sending, reducing manual communication overhead.</p>
+            <div class="project-tech-stack">
+              <span class="tech-badge">Python</span>
+              <span class="tech-badge">Automation</span>
+              <span class="tech-badge">Gen AI</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="projects-cta" data-aos="fade-up">
+        <a href="https://github.com/gowshiganv-2005" target="_blank" rel="noopener" class="btn btn-outline" id="githubAllProjects">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          View all on GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="section experience-section" id="experience">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">Work history</span>
+        <h2 class="section-title">Professional <span class="text-gradient">Experience</span></h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item" data-aos="fade-right">
+          <div class="timeline-marker">
+            <div class="timeline-dot"></div>
+            <div class="timeline-line"></div>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-role">Freelance AI Developer</h3>
+                <span class="timeline-company">Independent &bull; Remote</span>
+              </div>
+              <span class="timeline-period">2025 &ndash; Present</span>
+            </div>
+            <ul class="timeline-bullets">
+              <li>Collaborated with clients to design and implement innovative <strong>AI-powered chatbots</strong> and automation tools tailored to their specific business requirements.</li>
+              <li>Performed <strong>sales data analysis</strong> and built interactive Power BI dashboards to surface actionable business insights.</li>
+              <li>Designed and developed <strong>websites for small businesses</strong>, from requirements gathering through to production deployment.</li>
+              <li>Developed and deployed <strong>web services</strong> for clients using modern development technologies.</li>
+              <li>Leveraged <strong>AI-assisted workflows</strong> to accelerate development timelines and deliver solutions with enhanced accuracy improvements.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section class="section education-section" id="education">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">Academic background</span>
+        <h2 class="section-title">Education &amp; <span class="text-gradient">Certifications</span></h2>
+      </div>
+      <div class="edu-grid">
+        <div class="edu-card" data-aos="fade-up">
+          <div class="edu-icon-wrap">&#x1F393;</div>
+          <div class="edu-card-body">
+            <span class="edu-type">B.Tech</span>
+            <h3 class="edu-degree">Artificial Intelligence &amp; Data Science</h3>
+            <div class="edu-meta">
+              <span class="edu-score">CGPA: 7.55 <em>(through 5th semester)</em></span>
+              <span class="edu-year">Graduating 2027</span>
+            </div>
+          </div>
+        </div>
+        <div class="edu-card" data-aos="fade-up" data-aos-delay="80">
+          <div class="edu-icon-wrap">&#x1F4D6;</div>
+          <div class="edu-card-body">
+            <span class="edu-type">Higher Secondary</span>
+            <h3 class="edu-degree">Higher Secondary Education</h3>
+            <div class="edu-meta">
+              <span class="edu-score">Score: 78%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cert-section" data-aos="fade-up">
+        <h3 class="subsection-heading">Certifications &amp; Courses</h3>
+        <div class="cert-grid">
+          <div class="cert-card">
+            <div class="cert-icon">&#x1F3C6;</div>
+            <div>
+              <span class="cert-name">GenAI Powered Data Analytics</span>
+              <span class="cert-org">Tata &mdash; Forage</span>
+            </div>
+          </div>
+          <div class="cert-card">
+            <div class="cert-icon">&#x1F3C6;</div>
+            <div>
+              <span class="cert-name">Data Analytics Job Simulation</span>
+              <span class="cert-org">Quantium &mdash; Forage</span>
+            </div>
+          </div>
+          <div class="cert-card">
+            <div class="cert-icon">&#x1F3C6;</div>
+            <div>
+              <span class="cert-name">AI in Action Job Simulation</span>
+              <span class="cert-org">Vista Equity Partners &mdash; Forage</span>
+            </div>
+          </div>
+          <div class="cert-card">
+            <div class="cert-icon">&#x1F4DA;</div>
+            <div>
+              <span class="cert-name">AI / ML / Data Science Coursework</span>
+              <span class="cert-org">Great Learning &bull; Juno &bull; Infosys Springboard</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hackathon-section" data-aos="fade-up">
+        <h3 class="subsection-heading">Hackathons &amp; Competitions</h3>
+        <div class="hackathon-grid">
+          <div class="hackathon-card">
+            <span class="hack-icon">&#x26A1;</span>
+            <div>
+              <span class="hack-name">Smart India Hackathon (SIH)</span>
+              <span class="hack-year">2025 &amp; 2026</span>
+            </div>
+          </div>
+          <div class="hackathon-card">
+            <span class="hack-icon">&#x26A1;</span>
+            <div>
+              <span class="hack-name">Ingenium 4.0</span>
+              <span class="hack-year">24-hour Hackathon</span>
+            </div>
+          </div>
+          <div class="hackathon-card">
+            <span class="hack-icon">&#x26A1;</span>
+            <div>
+              <span class="hack-name">HackSummit</span>
+              <span class="hack-year">36-hour Hackathon</span>
+            </div>
+          </div>
+          <div class="hackathon-card">
+            <span class="hack-icon">&#x26A1;</span>
+            <div>
+              <span class="hack-name">Project X &amp; Tronix</span>
+              <span class="hack-year">2025 &amp; 2026</span>
+            </div>
+          </div>
+          <div class="hackathon-card">
+            <span class="hack-icon">&#x26A1;</span>
+            <div>
+              <span class="hack-name">MSME Symposium</span>
+              <span class="hack-year">Industry Event</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section contact-section" id="contact">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">Get in touch</span>
+        <h2 class="section-title">Let's <span class="text-gradient">Connect</span></h2>
+        <p class="section-sub">Open to freelance projects, internships, and full-time AI/ML roles. Let's build something great together.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info" data-aos="fade-right">
+          <div class="contact-card" id="contactPhoneCard">
+            <div class="contact-card-icon">&#x1F4F1;</div>
+            <div>
+              <span class="contact-label">Phone</span>
+              <a href="tel:+919025361098" class="contact-value">+91 90253 61098</a>
+            </div>
+          </div>
+          <div class="contact-card" id="contactEmailCard">
+            <div class="contact-card-icon">&#x1F4E7;</div>
+            <div>
+              <span class="contact-label">Email</span>
+              <a href="mailto:gowshigan20805@gmail.com" class="contact-value">gowshigan20805@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-card" id="contactLocationCard">
+            <div class="contact-card-icon">&#x1F4CD;</div>
+            <div>
+              <span class="contact-label">Location</span>
+              <span class="contact-value">Madurai, Tamil Nadu, India</span>
+            </div>
+          </div>
+          <div class="contact-card" id="contactGithubCard">
+            <div class="contact-card-icon">&#x1F419;</div>
+            <div>
+              <span class="contact-label">GitHub</span>
+              <a href="https://github.com/gowshiganv-2005" target="_blank" rel="noopener" class="contact-value">github.com/gowshiganv-2005</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <a href="#home" class="footer-logo">
+          <span class="logo-bracket">&lt;</span>GV<span class="logo-bracket">/&gt;</span>
+        </a>
+        <p class="footer-tagline">Building the future, one model at a time.</p>
+        <div class="footer-social">
+          <a href="https://github.com/gowshiganv-2005" target="_blank" rel="noopener" class="footer-social-link" id="footerGithub" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          </a>
+          <a href="mailto:gowshigan20805@gmail.com" class="footer-social-link" id="footerEmail" aria-label="Email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,12 2,6"/></svg>
+          </a>
+          <a href="tel:+919025361098" class="footer-social-link" id="footerPhone" aria-label="Phone">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.7 13.5a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.61 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.06 6.06l1.27-.84a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 17.12z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Gowshigan V. Crafted with &#x2764;&#xFE0F; and AI.</p>
+        <div class="footer-nav">
+          <a href="#home">Home</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
